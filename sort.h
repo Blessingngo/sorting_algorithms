@@ -50,8 +50,5 @@ void heap_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hore(int *array, size_t size);
-void merge(size_t lo, size_t mi, size_t hi, int *dest, int *src);
-void merge_sort(int *array, size_t size);
-avoid merge_partition(size_t lo, size_t hi, int *array, int *base);
 
 #endif /* SORT_H */
