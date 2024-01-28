@@ -4,6 +4,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Comparison direction macros for bitonic sort */
+#define UP 0
+#define DOWN 1
+
+/**
+ * enum bool - Enumeration of Boolean values.
+ * @false: Equals 0.
+ * @true: Equals 1.
+ */
+typedef enum bool
+{
+	false = 0,
+	true
+} bool;
+
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -18,33 +33,22 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-
+/* Printing helper functions */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
+/* Sorting algoritms */
 void bubble_sort(int *array, size_t size);
-int len_list(listint_t *h);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
-void quick_recursion(int *array, int left, int right, size_t size);
-int partition(int *array, int left, int right, size_t size);
 void shell_sort(int *array, size_t size);
-void switch_nodes(listint_t **list, listint_t **p);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
-void merge_recursion(int *arr, int *array, size_t left, size_t right);
-void merge_subarray(int *arr, int *array, size_t left,
-size_t middle, size_t right);
 void heap_sort(int *array, size_t size);
-void heapify(int *array, size_t s, size_t root, size_t size);
 void radix_sort(int *array, size_t size);
-void count_sort_LSD(int *array, size_t size, size_t lsd);
-void quick_sort_hoare(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
-void bitonic_recursion(int *array, int l, int r, int direction, size_t size);
-void bitonic_merge(int *array, int l, int r, int direction);
+void quick_sort_hoare(int *array, size_t size);
 
-#endif
-
+#endif /* SORT_H */
